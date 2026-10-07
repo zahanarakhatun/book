@@ -1,0 +1,25 @@
+{% extends 'master.html' %}
+
+{% block content %}
+<h1>BOOKMODEL TABLE</h1>
+
+<table>
+  <tr>
+    <th>booktitle</th>
+    <th>Author</th>
+    <th>Publish date</th>
+    <th>created_at</th>
+    <th>Action</th>
+  </tr>
+
+  {% for book in book %}
+  <tr>
+    <td>{{book.booktitle}}</td>
+    <td>{{book.author}}</td>
+    <td>{{book.publish_date}}</td>
+    <td>{{book.created_at}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock content %}
